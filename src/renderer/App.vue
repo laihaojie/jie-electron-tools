@@ -1,6 +1,5 @@
 <script setup lang="ts">
-
-window.electron.ipcRenderer.send('message', 'Hello from App.vue!');
+window.electron.ipcRenderer.send('message', 'Hello from App.vue!')
 </script>
 
 <template>
