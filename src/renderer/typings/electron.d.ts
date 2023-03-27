@@ -1,14 +1,30 @@
-import * as Electron from 'electron';
-
 /**
  * Should match main/preload.ts for typescript support in renderer
  */
 export default interface ElectronApi {
-  ipcRenderer: Electron.IpcRenderer,
+  sendMessage: (message: string) => void
 }
 
 declare global {
   interface Window {
-    electron: ElectronApi,
+    electronAPI: ElectronApi,
+    api: {
+      drag: any
+      exit: any
+      notification: any
+      mainFocus: any
+      mainMinimize: any
+      unAuth: any
+      onLogin: any
+      menu: any
+      onLogout: any
+    },
+    apiAdd: {
+      addExit: any
+    },
+    apiLogin: {
+      loginSuccess: any
+      loginExit: any
+    }
   }
 }

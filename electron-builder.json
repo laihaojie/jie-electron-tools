@@ -1,5 +1,5 @@
 {
-  "appId": "com.electron.app",
+  "appId": "com.jieapp.electron_tools",
   "directories": {
     "output": "dist"
   },
@@ -10,22 +10,34 @@
     "shortcutName": "Electron App"
   },
   "win": {
+    "icon": "static/logo.png",
     "target": "nsis"
   },
+  "mac": {
+    "icon": "static/logo.png",
+    "target": "dmg"
+  },
   "linux": {
-    "target": ["snap"]
+    "icon": "static/logo.png",
+    "target": [
+      "snap"
+    ]
   },
   "files": [
     "build/main/**/*",
     {
       "from": "build/renderer",
       "to": "renderer",
-      "filter": ["**/*"]
+      "filter": [
+        "**/*"
+      ]
     },
     {
       "from": "src/main/static",
       "to": "static",
-      "filter": ["**/*"]
+      "filter": [
+        "**/*"
+      ]
     },
     "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
     "!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}",

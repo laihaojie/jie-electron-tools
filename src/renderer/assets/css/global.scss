@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
+html,
+main {
+  -webkit-app-region: drag;
+  //菜单图标与文字间距
+  --mx-menu-placeholder-width: 10px !important;
+}
+
+textarea,
+div,
+.footer-menu,
+input {
+  -webkit-app-region: no-drag;
+}
+
+.titlebar {
+  //禁用文本选择
+  -webkit-user-select: none;
+}
